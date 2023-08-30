@@ -1,5 +1,6 @@
 import React from 'react';
-import useBlockScroll from '../hooks/useBlockScroll';
+import { useBlockScroll } from '../hooks';
+
 const Loading = () => {
   useBlockScroll();
   return (
