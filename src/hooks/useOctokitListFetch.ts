@@ -5,7 +5,7 @@ import { Issue } from '../types/issue';
 import { ORGANIZATION_NAME, REPOSITORY_NAME } from '../constants/constants';
 
 const useOctokitListFetch = (
-  url: string = `GET /repos/${ORGANIZATION_NAME}/${REPOSITORY_NAME}/issues?sort=comments&state=open`,
+  url = `GET /repos/${ORGANIZATION_NAME}/${REPOSITORY_NAME}/issues?sort=comments&state=open`,
   routeParams: Record<string, string | number>,
 ) => {
   const [data, setData] = useState<Issue[]>([]);

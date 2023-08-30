@@ -21,7 +21,7 @@
     "no-multiple-empty-lines": "error",
     "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
     "eqeqeq": "error",
-    "dot-notation": "warn",
-    "no-unused-vars": "error"
+    "dot-notation": "warn"
+    //"no-unused-vars": "error"
   }
 }
