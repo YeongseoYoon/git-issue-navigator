@@ -4,13 +4,15 @@ import { Link } from 'react-router-dom';
 import { Issue } from '../../types/issue';
 import { IMAGE_HREF, IMAGE_URL } from '../../constants/constants';
 import IssueItem from './IssueItem';
+import spinnerUrl from '../../assets/spinner.gif';
 
 type IssueListProps = {
   issues?: Issue[];
+  isInfiniteLoading: boolean;
   observerElementRef: (node: HTMLDivElement) => void;
 };
 
-const IssueList = ({ issues, observerElementRef }: IssueListProps) => {
+const IssueList = ({ issues, observerElementRef, isInfiniteLoading }: IssueListProps) => {
   return (
     <React.Fragment>
       {issues?.map((issue, index) => {
@@ -36,6 +38,11 @@ const IssueList = ({ issues, observerElementRef }: IssueListProps) => {
           </React.Fragment>
         );
       })}
+      {isInfiniteLoading && (
+        <div className="flex justify-center w-full m-3 h-14">
+          <img src={spinnerUrl} />
+        </div>
+      )}
       <div ref={observerElementRef} />
     </React.Fragment>
   );
