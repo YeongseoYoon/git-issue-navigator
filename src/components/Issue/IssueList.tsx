@@ -14,7 +14,7 @@ const IssueList = ({ issues, observerElementRef }: IssueListProps) => {
   return (
     <React.Fragment>
       {issues?.map((issue, index) => {
-        const isAdvertismentIndex = index % 5 === 4;
+        const isAdvertismentIndex = (index + 1) % 4 === 0;
         return (
           <React.Fragment key={issue.id}>
             <Link
