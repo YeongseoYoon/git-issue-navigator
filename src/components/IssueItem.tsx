@@ -9,14 +9,14 @@ interface IssueItemProps {
 
 const IssueItem = ({ issue }: IssueItemProps) => {
   return (
-    <div className="flex flex-col border-b-2 mx-2 p-1 w-full">
+    <div className="flex flex-col border-b-2 p-1 w-full">
       <div className="flex flex-row justify-between">
         <div className="font-bold mb-2">
           <span className="mr-3">#{issue?.number}</span>
           <span>{issue?.title}</span>
         </div>
-        <div className="w-auto">
-          <span className="text-xs font-light break-keep">코멘트: {issue?.comments}</span>
+        <div className="min-w-fit">
+          <span className="text-xs font-light">코멘트: {issue?.comments}</span>
         </div>
       </div>
       <div className="font-light text-sm">

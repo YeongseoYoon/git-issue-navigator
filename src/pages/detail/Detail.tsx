@@ -22,7 +22,7 @@ const Detail = () => {
   return (
     <div className="flex flex-col h-full">
       <div className="flex flex-row m-3 items-center">
-        <img src={issue?.user.avatar_url} className="w-12 h-12" />
+        <img src={issue?.user.avatar_url} className="w-12 h-12 mr-2" />
         {issue && <IssueItem issue={issue} />}
       </div>
       <div className="p-2 font-light">
