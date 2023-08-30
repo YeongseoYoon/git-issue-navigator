@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
 import { octokit } from '../apis/api';
 import { Issue } from '../types/issue';
+import { RequestError } from '@octokit/request-error';
 
 export const useOctokitFetch = <T = Issue | Issue[]>(
   url: string,
   routeParams: Record<string, string | number>,
 ) => {
   const [data, setData] = useState<T | undefined>();
-
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<RequestError>();
   useEffect(() => {
     (async () => {
       try {
@@ -18,12 +20,14 @@ export const useOctokitFetch = <T = Issue | Issue[]>(
           ...routeParams,
         });
         setData(response.data);
+        setIsLoading(false);
       } catch (error) {
-        console.error('Request error:', error);
-        throw error;
+        if (error instanceof RequestError) {
+          setError(error);
+        }
       }
     })();
   }, []);
 
-  return { data };
+  return { data, isLoading, error };
 };
