@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# Git Issue Navigator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black"/>
+<img src="https://img.shields.io/badge/Typescript-3178C6?style=flat-square&logo=Typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white"/>
+</p>
 
-## Available Scripts
+## ❤️ 프로젝트 내용
 
-In the project directory, you can run:
+GitHub REST API를 활용해 특정 Repository에 대한 Issue를 볼 수 있는 서비스
 
-### `npm start`
+## 🌱 배포 및 제작 기간
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 배포 링크 : [Git Issue Navigator](git-issue-navigator.vercel.app)
+- 제작 기간 : 2023.08.29. ~ 2023.08.31 (3일)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🚀 실행 방법
 
-### `npm test`
+```
+$ git clone https://github.com/YeongseoYoon/git-issue-navigator.git
+$ npm install
+$ npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 디렉토리 구조
 
-### `npm run build`
+```
+ 📦src
+ ┣ 📂apis
+ ┣ 📂assets
+ ┣ 📂components
+ ┃ ┣ 📂Issue
+ ┃ ┣ 📜ErrorBoundary.tsx
+ ┃ ┣ 📜Header.tsx
+ ┃ ┣ 📜index.ts
+ ┃ ┣ 📜Layout.tsx
+ ┃ ┣ 📜Loading.tsx
+ ┃ ┗ 📜RouteErrorBoundary.tsx
+ ┣ 📂constants
+ ┣ 📂hooks
+ ┣ 📂pages
+ ┃ ┣ 📂detail
+ ┃ ┗ 📂home
+ ┣ 📂router
+ ┣ 📂types
+ ┣ 📂utils
+ ┣ 📜App.tsx
+ ┗ 📜index.tsx
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ 구현 기능
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. 에러바운더리(라우팅 및 비동기 에러제어)
+2. 로딩 페이지
+3. api 호출해 목록 / 상세 페이지 구현
+4. 광고 이미지 호출
+5. 무한 스크롤 구현
