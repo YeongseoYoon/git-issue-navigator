@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router';
 
 import { ORGANIZATION_NAME, REPOSITORY_NAME } from '../../constants/constants';
-import { ErrorBoundary, Loading } from '../../components';
+import { Loading } from '../../components';
 import { useOctokitDetailFetch } from '../../hooks';
 import IssueDetail from '../../components/Issue/IssueDetail';
 

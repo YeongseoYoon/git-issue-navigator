@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ORGANIZATION_NAME, REPOSITORY_NAME } from '../../constants/constants';
-import { ErrorBoundary, Loading, IssueList } from '../../components';
+import { Loading, IssueList } from '../../components';
 import { useOctokitListFetch, useIntersectionObserver } from '../../hooks';
 
 const Home = () => {
