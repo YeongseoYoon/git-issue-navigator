@@ -2,12 +2,15 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import Layout from './components/Layout';
+import { ErrorBoundary } from './components';
 
 function App() {
   return (
     <Layout>
       <Header />
-      <Outlet />
+      <ErrorBoundary>
+        <Outlet />
+      </ErrorBoundary>
     </Layout>
   );
 }

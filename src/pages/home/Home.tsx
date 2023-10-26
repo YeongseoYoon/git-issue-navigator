@@ -28,13 +28,11 @@ const Home = () => {
   if (error) throw error;
 
   return (
-    <ErrorBoundary>
-      <IssueList
-        issues={issues}
-        observerElementRef={observerElementRef}
-        isInfiniteLoading={isInfiniteLoading}
-      />
-    </ErrorBoundary>
+    <IssueList
+      issues={issues}
+      observerElementRef={observerElementRef}
+      isInfiniteLoading={isInfiniteLoading}
+    />
   );
 };
 

@@ -26,9 +26,7 @@ const Detail = () => {
   if (error) throw error;
   return (
     <div className="flex flex-col h-full">
-      <ErrorBoundary>
-        <IssueDetail issue={issue} />
-      </ErrorBoundary>
+      <IssueDetail issue={issue} />
     </div>
   );
 };
